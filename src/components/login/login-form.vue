@@ -1,19 +1,15 @@
 <template>
-    <Form ref="loginForm" :model="loginForm">
-        <FormItem prop="user">
-            <Input type="text" v-model="loginForm.username" placeholder="Username">
-                <Icon type="ios-person-outline" slot="prepend"></Icon>
-            </Input>
-        </FormItem>
-        <FormItem prop="password">
-            <Input type="password" v-model="loginForm.password" placeholder="Password">
-                <Icon type="ios-lock-outline" slot="prepend"></Icon>
-            </Input>
-        </FormItem>
-        <FormItem>
-            <Button type="primary" @click="handleSubmit()" long>登录</Button>
-        </FormItem>
-    </Form>
+   <el-form v-model="loginForm" @keydown.enter.native="handleSubmit" :size="this.$store.state.app.componentSize">
+      <el-form-item>
+         <el-input v-model="loginForm.username"></el-input>
+      </el-form-item>
+      <el-form-item>
+         <el-input type="password" v-model="loginForm.password" show-password clearable></el-input>
+      </el-form-item>
+      <el-form-item>
+         <el-button type="primary" class="btn-block">登录</el-button>
+      </el-form-item>
+   </el-form>
 </template>
 
 <script>

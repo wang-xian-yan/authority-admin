@@ -24,5 +24,9 @@ export default {
   #app {
     .size;
   }
+
+  .btn-block {
+    width: 100%;
+  }
 </style>
 

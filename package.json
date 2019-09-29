@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
-    "iview": "^3.5.1",
+    "element-ui": "^2.12.0",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
     "vue": "^2.6.10",

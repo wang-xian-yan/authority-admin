@@ -1,11 +1,11 @@
 <template>
-    <Layout style="height: 100%">
-        <Sider></Sider>
-        <Layout>
-            <Header>Header</Header>
-            <Content></Content>
-        </Layout>
-    </Layout>
+    <el-container style="height: 100%">
+        <el-aside width="200px">Aside</el-aside>
+        <el-container>
+            <el-header>Header</el-header>
+            <el-main>Main</el-main>
+        </el-container>
+    </el-container>
 </template>
 
 <script>
