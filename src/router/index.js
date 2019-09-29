@@ -1,13 +1,18 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Login from "../view/login/login";
+import login from "../view/login/login";
+import dashboard from "../view/dashboard/home";
 Vue.use(Router);
 export default new Router({
     routes: [
         {
             path: '/',
-            name: 'Login',
-            component: Login
+            name: 'login',
+            component: login
+        },{
+            path: '/dashboard',
+            name: 'dashboard',
+            component: dashboard
         }
     ]
 })

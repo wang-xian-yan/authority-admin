@@ -4,9 +4,10 @@
 <template>
     <div class="login">
         <div class="login-form">
-            <a-card title="欢迎登录">
+            <Card>
+                <p slot="title">欢迎登录</p>
                 <login-form/>
-            </a-card>
+            </Card>
         </div>
     </div>
 </template>

@@ -1,19 +1,19 @@
 <template>
-    <a-form :form="form">
-        <a-form-item>
-            <a-input placeholder="Username">
-                <a-icon slot="prefix" type="user" />
-            </a-input>
-        </a-form-item>
-        <a-form-item>
-            <a-input placeholder="Password">
-                <a-icon slot="prefix" type="lock" />
-            </a-input>
-        </a-form-item>
-        <a-form-item>
-            <a-button type="primary" block>登录</a-button>
-        </a-form-item>
-    </a-form>
+    <Form ref="loginForm" :model="loginForm">
+        <FormItem prop="user">
+            <Input type="text" v-model="loginForm.username" placeholder="Username">
+                <Icon type="ios-person-outline" slot="prepend"></Icon>
+            </Input>
+        </FormItem>
+        <FormItem prop="password">
+            <Input type="password" v-model="loginForm.password" placeholder="Password">
+                <Icon type="ios-lock-outline" slot="prepend"></Icon>
+            </Input>
+        </FormItem>
+        <FormItem>
+            <Button type="primary" @click="handleSubmit()" long>登录</Button>
+        </FormItem>
+    </Form>
 </template>
 
 <script>
@@ -21,9 +21,18 @@
         name: "LoginForm",
         data() {
             return {
-                form: this.$form.createForm(this)
+                loginForm: {
+                    username: '',
+                    password: ''
+                }
+
             };
         },
+        methods: {
+            handleSubmit() {
+                this.$router.replace({name: 'dashboard'});
+            }
+        }
     }
 </script>
 
