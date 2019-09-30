@@ -4,12 +4,9 @@
 <template>
     <div class="login">
         <div class="login-form">
-            <el-card class="box-card">
-                <div slot="header" class="clearfix">
-                    <span>欢迎登录</span>
-                </div>
+            <a-card title="欢迎登录">
                 <login-form/>
-            </el-card>
+            </a-card>
             >
         </div>
     </div>
